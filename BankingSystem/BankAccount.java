@@ -130,20 +130,6 @@ public class BankAccount implements Serializable{
         System.out.println("Successfully withdrew R" + amount);
         return true;
     }
-	/*
-	public void transferMoney(BankAccount targetAccount, double amount) {
-		if(amount > balance) {
-			System.out.println("Insufficient funds. Current balance: R" + balance);
-			return;
-		}
-		
-		balance -= amount;
-		targetAccount.balance += amount;
-		transactionHistory.add("Transferred R" + amount + " to Account " + targetAccount.getAccountNumber() + " on " + LocalDate.now());
-		targetAccount.transactionHistory.add("Received R" + amount + " from Account " + this.accountNumber + " on " + LocalDate.now());
-		System.out.println("Transferred R" + amount + " to account " + targetAccount);
-	}
-	*/
 	
 	public TransferResult transferMoneyTo(BankAccount targetAccount, double amount, String description) {
 	    // Input validation
